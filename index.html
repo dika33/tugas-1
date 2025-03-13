@@ -5,48 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: oklch(0.282 0.091 267.935);
+        }
+    </style>
 </head>
-<nav class="bg-white border-white-200 bg-gradient-to-r -indigo-800">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Portofolio</span>
-        </a>
-        <div class="flex items-center">
-            <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
-                <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline text-xl" aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="About Me" class="text-gray-900 dark:text-white hover:underline text-xl">About Me</a>
-                </li>
-                <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline text-xl">Project</a>
-                </li>
-
+<body class="min-h-screen text-white p-8">
+    <nav class="bg-gradient-to-r from-indigo-800 to-purple-600 p-4 shadow-md">
+        <div class="flex justify-between items-center max-w-6xl mx-auto">
+            <span class="text-2xl font-semibold text-white font-semibold">Portofolio</span>
+            <ul class="flex space-x-8 text-lg">
+                <li><a href="#home" class="text-white hover:underline text-xl">Home</a></li>
+                <li><a href="#about" class="text-white hover:underline text-xl">About Me</a></li>
+                <li><a href="#projects" class="text-white hover:underline text-xl">Projects</a></li>
             </ul>
-    </div>
-</nav>
-
-<body class="min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 from-blue-500 to-purple-600 text-white p-8">
-    <header class="text-center mb-12">
-        <div class="flex justify-center">
-            <img src="sumber/desktop-wallpaper-travis-scott-macbook-astroworld.jpg" alt="Foto Profil" class="w-60 h-60 mx-auto rounded-full shadow-lg mb-4 items-center">
         </div>
+    </nav>
+
+    <header id="home" class="text-center mb-12 mt-8">
+        <img src="sumber/desktop-wallpaper-travis-scott-macbook-astroworld.jpg" alt="Foto Profil" class="w-40 h-40 mx-auto rounded-full shadow-lg mb-4">
         <h1 class="text-5xl font-bold mb-2">Mochamad Andika Rizkia</h1>
         <p class="text-xl">Web Developer | Designer | Freelancer</p>
     </header>
-
-    <div class="About Me">
-        <section class="max-w-4xl mx-auto text-center bg-white text-black p-8 rounded-lg shadow-lg">
-            <h2 class="text-4xl font-semibold mb-6 text-blue-600">Tentang Saya</h2>
-            <p class="text-lg leading-relaxed">
-                Saya adalah seorang pengembang web yang bersemangat dalam menciptakan pengalaman digital yang menarik dan fungsional.
-                Dengan pengalaman dalam berbagai teknologi web, saya selalu berusaha memberikan solusi inovatif dan efektif.
-            </p>
-        </section>
-    </div>
     
-    <section class="max-w-4xl mx-auto mt-12">
-        <h2 class="text-3xl font-semibold mb-6">Proyek Saya</h2>
+    <section id="about" class="max-w-4xl mx-auto text-center bg-white text-black p-8 rounded-lg shadow-lg">
+        <h2 class="text-4xl font-semibold mb-6 text-blue-600">About Me</h2>
+        <p class="text-lg leading-relaxed">
+            Saya adalah seorang pengembang web yang bersemangat dalam menciptakan pengalaman digital yang menarik dan fungsional.
+            Dengan pengalaman dalam berbagai teknologi web, saya selalu berusaha memberikan solusi inovatif dan efektif.
+        </p>
+    </section>
+    
+    <section id="projects" class="max-w-4xl mx-auto mt-12">
+        <h2 class="text-3xl font-semibold mb-6 text-center">Proyek Saya</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white text-black p-6 rounded-lg shadow-lg">
                 <h3 class="text-2xl font-bold">Proyek 1</h3>
