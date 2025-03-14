@@ -25,11 +25,54 @@
         </div>
     </nav>
 
-    <header id="home" class="text-center mb-12 mt-8">
-        <img src="sumber/desktop-wallpaper-travis-scott-macbook-astroworld.jpg" alt="Foto Profil" class="w-60 h-60 mx-auto rounded-full shadow-lg mb-4">
-        <h1 class="text-5xl font-bold mb-2">Mochamad Andika Rizkia</h1>
-        <p class="text-xl">Web Developer | Designer | Freelancer</p>
-    </header>
+    <body class="bg-gray-900 text-white">
+      <header id="home" class="text-center mb-12 mt-8 px-4 opacity-0 transition-opacity duration-1000">
+          <img id="profile-img" src="sumber/desktop-wallpaper-travis-scott-macbook-astroworld.jpg" 
+               alt="Foto Profil" 
+               class="w-60 h-60 mx-auto rounded-full shadow-lg mb-4 object-cover">
+          
+          <h1 class="text-4xl sm:text-5xl font-bold mb-2">Mochamad Andika Rizkia</h1>
+          
+          <p id="typing-text" class="text-lg sm:text-xl text-gray-300"></p>
+      </header>
+  
+      <script>
+          document.addEventListener("DOMContentLoaded", function () {
+              // Efek fade-in saat halaman dimuat
+              setTimeout(() => {
+                  document.getElementById("home").style.opacity = "1";
+              }, 200);
+  
+              // Efek Ketik Otomatis
+              const texts = ["Web Developer", "Designer", "Freelancer"];
+              let index = 0;
+              let charIndex = 0;
+              const typingElement = document.getElementById("typing-text");
+  
+              function typeText() {
+                  if (charIndex < texts[index].length) {
+                      typingElement.textContent += texts[index][charIndex];
+                      charIndex++;
+                      setTimeout(typeText, 100);
+                  } else {
+                      setTimeout(eraseText, 1000);
+                  }
+              }
+  
+              function eraseText() {
+                  if (charIndex > 0) {
+                      typingElement.textContent = texts[index].substring(0, charIndex - 1);
+                      charIndex--;
+                      setTimeout(eraseText, 50);
+                  } else {
+                      index = (index + 1) % texts.length;
+                      setTimeout(typeText, 500);
+                  }
+              }
+  
+              typeText();
+          });
+      </script>
     
     <section id="about" class="max-w-4xl mx-auto text-center bg-white text-black p-8 rounded-lg shadow-lg">
         <section>
